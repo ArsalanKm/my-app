@@ -12,11 +12,11 @@ const Header: React.FunctionComponent = () => {
   const items: Array<IItems> = [
     { text: "Home", href: "/" },
     { text: "Advertise", href: "/advertise" },
-    { text: "contact", href: "/contact" },
-    { text: "join", href: "/join" },
-    { text: "bookmarks", href: "/bookmarks" },
+    { text: "Contact", href: "/contact" },
+    { text: "Join", href: "/join" },
+    { text: "Bookmarks", href: "/bookmarks" },
     { text: "Languages", href: "/languages" },
-    { text: "setting", href: "/setting" },
+    { text: "Setting", href: "/setting" },
   ];
 
   return (
