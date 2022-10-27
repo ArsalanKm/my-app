@@ -1,9 +1,12 @@
 import React from "react";
 import { Paper, OutlinedInput } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import CategoryCard from "components/category-card";
+import { categories } from "data";
 import "./styles.scss";
 
 const HomePage = () => {
+  console.log(categories);
   return (
     <Paper className="home-page">
       <OutlinedInput
@@ -11,7 +14,11 @@ const HomePage = () => {
         placeholder="Search..."
         startAdornment={<SearchIcon />}
       />
-      homepage
+      <div className="home-page__category-container">
+        {categories.map((category) => (
+          <CategoryCard key={category.id} category={category} />
+        ))}
+      </div>
     </Paper>
   );
 };

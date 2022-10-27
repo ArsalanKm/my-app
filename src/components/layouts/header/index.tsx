@@ -23,7 +23,7 @@ const Header: React.FunctionComponent = () => {
     <div className="header">
       <div className="header__content">
         {items.map(({ text, href }) => (
-          <Link className="header__link" to={href}>
+          <Link key={href} className="header__link" to={href}>
             <Typography>{text}</Typography>
           </Link>
         ))}

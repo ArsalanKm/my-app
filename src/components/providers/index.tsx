@@ -6,7 +6,7 @@ const RouterProvider: React.FunctionComponent = () => {
   return (
     <Routes>
       {APP_ROUTES.map(({ component: Component, path }) => (
-        <Route path={path} element={<Component />} />
+        <Route key={path} path={path} element={<Component />} />
       ))}
     </Routes>
   );
