@@ -15,7 +15,11 @@
   &__category-container {
     margin-top: 64px;
     gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  @media screen and (max-width: 680px) {
+    margin-top: -80px;
   }
 }

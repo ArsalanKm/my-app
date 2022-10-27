@@ -5,8 +5,10 @@
   top: 0;
   z-index: 1200;
   height: 60px;
+  padding: 0 32px;
   background: white;
   border-color: #e5e5e5;
+
   &__content {
     max-width: 978px;
     display: flex;
@@ -14,8 +16,13 @@
     margin: 0 auto;
     height: 100%;
   }
+
   &__link {
     color: #3f3f3f;
     margin-inline-end: 32px;
+  }
+
+  @media screen and (max-width: 680px) {
+    display: none;
   }
 }

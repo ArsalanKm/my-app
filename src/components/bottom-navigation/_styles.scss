@@ -1,0 +1,37 @@
+.bottom-navigation {
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: none;
+  padding: 8px 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    text-align: center;
+    width: 50px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__text {
+      font-size: 0.65rem !important;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    display: flex;
+  }
+}

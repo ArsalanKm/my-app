@@ -87,6 +87,10 @@ video {
   vertical-align: baseline;
 }
 
+* {
+  box-sizing: border-box !important;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -96,4 +100,8 @@ a {
   max-width: 978px;
   margin: 0 auto;
   margin-top: 80px;
+
+  @media screen and (max-width: 680px) {
+    margin-bottom: 60px;
+  }
 }
