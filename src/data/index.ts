@@ -67,6 +67,7 @@ export const Bottom_Navigation: Array<INavigation> = [
 ];
 
 export type ItemType = {
+  id: number;
   name: string;
   country: string;
   city: string;
@@ -90,6 +91,7 @@ export type CategoryType =
 
 const DOCTORS: Array<ItemType> = [
   {
+    id: 1,
     name: "دکتر علامه نعیمی",
     country: "Netherland",
     city: "Amesterdam",
@@ -102,6 +104,7 @@ const DOCTORS: Array<ItemType> = [
     category: "doctor",
   },
   {
+    id: 2,
     name: "دکتر فراهانی",
     country: "Netherland",
     city: "Den Haag",
@@ -134,3 +137,16 @@ export const itemsDefaultImages: Record<CategoryType, string> = {
   shop: shopImage,
   restaurants: restaurantImage,
 };
+
+export const ItemPageData = [
+  "name",
+  "country",
+  "city",
+  "address",
+  "phone",
+  "instagram",
+  "website",
+  "images",
+  "location",
+  "category",
+];

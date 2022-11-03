@@ -1,0 +1,16 @@
+.item-page {
+  background-color: #f2f5f8 !important;
+  padding: 8px;
+  @media screen and (max-width: 680px) {
+    height: 100%;
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    span {
+      margin-inline-end: 8px;
+    }
+  }
+}
