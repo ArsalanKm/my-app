@@ -1,0 +1,12 @@
+.category-page {
+  background-color: #f2f5f8 !important;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px;
+
+  @media screen and (max-width: 680px) {
+    justify-content: center;
+  }
+}

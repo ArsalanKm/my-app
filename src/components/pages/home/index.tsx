@@ -6,7 +6,6 @@ import { categories } from "data";
 import "./styles.scss";
 
 const HomePage: React.FunctionComponent = () => {
-  console.log(categories);
   return (
     <Paper className="home-page">
       <OutlinedInput
@@ -15,9 +14,6 @@ const HomePage: React.FunctionComponent = () => {
         startAdornment={<SearchIcon />}
       />
       <div className="home-page__category-container">
-        {categories.map((category) => (
-          <CategoryCard key={category.id} category={category} />
-        ))}
         {categories.map((category) => (
           <CategoryCard key={category.id} category={category} />
         ))}

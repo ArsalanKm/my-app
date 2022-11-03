@@ -65,3 +65,72 @@ export const Bottom_Navigation: Array<INavigation> = [
     alt: "setting-image",
   },
 ];
+
+export type ItemType = {
+  name: string;
+  country: string;
+  city: string;
+  address: string;
+  phone: string;
+  website?: string;
+  instagram?: string;
+  images: null;
+  location: string;
+  category: CategoryType;
+};
+
+export type CategoryType =
+  | "doctor"
+  | "dentist"
+  | "constructor"
+  | "lawyer"
+  | "shop"
+  | "beauty"
+  | "restaurants";
+
+const DOCTORS: Array<ItemType> = [
+  {
+    name: "دکتر علامه نعیمی",
+    country: "Netherland",
+    city: "Amesterdam",
+    address: "",
+    phone: "0031202105555",
+    instagram: "",
+    website: "huisartsnaimi.nl",
+    images: null,
+    location: "",
+    category: "doctor",
+  },
+  {
+    name: "دکتر فراهانی",
+    country: "Netherland",
+    city: "Den Haag",
+    address: "Westeinde 223, 2512 GZ Den Haag, Netherlands",
+    phone: "0031703888406",
+    instagram: "",
+    website: "huisartsnaimi.nl",
+    images: null,
+    location: "",
+    category: "doctor",
+  },
+];
+
+export const data: Record<CategoryType, Array<ItemType>> = {
+  doctor: DOCTORS,
+  dentist: [],
+  constructor: [],
+  lawyer: [],
+  shop: [],
+  beauty: [],
+  restaurants: [],
+};
+
+export const itemsDefaultImages: Record<CategoryType, string> = {
+  doctor: doctorImage,
+  dentist: dentistImage,
+  lawyer: lawyerImage,
+  beauty: beautyImage,
+  constructor: constructorImage,
+  shop: shopImage,
+  restaurants: restaurantImage,
+};

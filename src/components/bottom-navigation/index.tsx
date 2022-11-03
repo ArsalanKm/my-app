@@ -9,7 +9,7 @@ const BottomNavigation: React.FunctionComponent = () => {
     <Paper className="bottom-navigation">
       <ul className="bottom-navigation__list">
         {Bottom_Navigation.map((el) => (
-          <li className="bottom-navigation__items">
+          <li key={el.href} className="bottom-navigation__items">
             <Link to={el.href}>
               <img src={el.image} alt={el.alt} />
               <Typography className="bottom-navigation__items__text">
