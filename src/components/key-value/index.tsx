@@ -15,7 +15,7 @@ const KeyValueRow: React.FunctionComponent<IKeyValueRowProps> = ({
     <>
       <div className="key-value-row">
         <Typography>{title}</Typography>
-        <Typography>{value}</Typography>
+        <Typography style={{ maxWidth: "185px" }}>{value || "-"}</Typography>
       </div>
       <hr className="divider" />
     </>

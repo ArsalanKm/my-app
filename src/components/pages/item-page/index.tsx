@@ -21,7 +21,7 @@ const ItemPage: React.FunctionComponent = () => {
     return null;
   }
 
-  console.log(cat, id);
+  console.log(cat, id, item);
   return (
     <>
       <div className="item-page__navbar">
