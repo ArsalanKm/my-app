@@ -10,6 +10,16 @@
     height: 40px;
     margin: 0 auto;
     margin-top: 5px;
+    label {
+      line-height: 0.75;
+    }
+  }
+
+  .input__searchbox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__category-container {
@@ -20,8 +30,14 @@
   }
 
   @media screen and (max-width: 680px) {
-    margin-top: -80px;
+    // margin-top: -80px;
     height: 100%;
     overflow: auto;
   }
+}
+
+.option__link {
+  padding: 4px 8px !important;
+  display: flex;
+  align-items: center;
 }
