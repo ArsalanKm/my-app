@@ -42,6 +42,7 @@ const ItemPage: React.FunctionComponent = () => {
             value={(item && item[el as x]) || ""}
           />
         ))}
+        <iframe title="my" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.326767222861!2d51.22064561532684!3d35.61967008020869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8df9029eb15861%3A0x76ed5b3a1f61fb49!2sAlibaba%20Resturant!5e0!3m2!1sen!2sru!4v1667916376485!5m2!1sen!2sru" width="600" height="450" style={{border:0}}  loading="lazy" />
       </Paper>
     </>
   );
