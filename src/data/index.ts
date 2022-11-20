@@ -159,7 +159,7 @@ export type Category = {
 }
 
 
-const chainSuperMarkets = ["Boon's Markt",
+export const chainSuperMarkets = ["Boon's Markt",
   "Dagwinkel",
   "DekaMarkt",
   "Dirk",
@@ -174,7 +174,7 @@ const chainSuperMarkets = ["Boon's Markt",
   "PLUS",
   "Poiesz",
   "Spar",
-  "Vomar"] as const;
+  "Vomar"];
 
 type ChainSuperMarketType = typeof chainSuperMarkets[number]
 type ChainSuperMarket = {
@@ -183,7 +183,7 @@ type ChainSuperMarket = {
 }
 
 
-const chainSuperMarketMap: Record<ChainSuperMarketType, Array<ChainSuperMarket>> = {
+export const chainSuperMarketMap: Record<ChainSuperMarketType, Array<ChainSuperMarket>> = {
   "Boon's Markt": [],
   "Dagwinkel": [],
   "DekaMarkt": [],
@@ -216,4 +216,14 @@ const chainSuperMarketMap: Record<ChainSuperMarketType, Array<ChainSuperMarket>>
   "Poiesz": [],
   "Spar": [],
   "Vomar": [],
+}
+
+export const leafs = ['chainsupermarket', 'individualsupermarket', 'chainhomeappliance', "individualhomeappliance"] as const
+export type LeafType = typeof leafs[number]
+export const leafMap: Record<LeafType, Array<string>> = {
+  "chainsupermarket": chainSuperMarkets,
+  "individualsupermarket": [],
+  "chainhomeappliance": [],
+  "individualhomeappliance": []
+
 }

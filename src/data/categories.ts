@@ -43,7 +43,7 @@ export const categories: Array<Category> = [
     },
     {
         id: 9,
-        slug: 'individualhomeapplicance',
+        slug: 'individualhomeappliance',
         parentId: 5
     },
     {
