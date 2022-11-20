@@ -150,3 +150,10 @@ export const ItemPageData = [
   "location",
   "category",
 ];
+
+export type Category = {
+  id: number;
+  slug: string;
+  parentId: number
+  children?: Array<Category>
+}

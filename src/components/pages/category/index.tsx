@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Paper } from "@mui/material";
 import { useParams } from "react-router";
-import { data, CategoryType, ItemType } from "data";
-import ItemCard from "components/item-card";
+import { Tree, searchTree } from "utils";
+import { Category } from "data";
 import "./styles.scss";
 
-const CategoryPage = () => {
+
+const CategoryPage: React.FunctionComponent = () => {
   const { cat } = useParams();
-  const items: Array<ItemType> =
-    data[(cat as CategoryType) || ("doctor" as CategoryType)];
+  const [items, setItems] = useState<Array<Category>>([])
+  useEffect(() => {
+    if (cat) {
+      setItems(searchTree(Tree, cat)?.children || [])
+    }
+  }, [cat])
+
+
 
   return (
     <Paper className="category-page">
-      {items.map((el) => (
-        <ItemCard data={el} key={el.name} />
+      {items && items.length > 0 && items.map((el) => (
+        <div key={el.id}>
+          <Link to={`/category/${el.slug}`}>
+            {el.slug}
+          </Link>
+        </div>
       ))}
     </Paper>
   );
