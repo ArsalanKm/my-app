@@ -9,18 +9,13 @@ import "./styles.scss";
 
 const CategoryPage: React.FunctionComponent = () => {
   const { cat } = useParams();
-  console.log(cat)
   let items: Array<Category> = []
 
   if (!cat) {
     return null
   }
-  console.log(searchTree(Tree, cat)?.children)
 
   items = (searchTree(Tree, cat)?.children || [])
-  console.log(searchTree(Tree, cat)?.children)
-
-  console.log(items)
 
   return (
     <Paper className="category-page">
