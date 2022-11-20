@@ -20,13 +20,14 @@ const CategoryPage: React.FunctionComponent = () => {
 
   return (
     <Paper className="category-page">
-      {items && items.length > 0 && items.map((el) => (
+      {/* {items && items.length > 0 ? items.map((el) => (
         <div key={el.id}>
           <Link to={`/category/${el.slug}`}>
             {el.slug}
           </Link>
         </div>
-      ))}
+      )) : } */}
+
     </Paper>
   );
 };

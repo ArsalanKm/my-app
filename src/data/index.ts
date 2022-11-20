@@ -157,3 +157,63 @@ export type Category = {
   parentId: number
   children?: Array<Category>
 }
+
+
+const chainSuperMarkets = ["Boon's Markt",
+  "Dagwinkel",
+  "DekaMarkt",
+  "Dirk",
+  "EkoPlaza",
+  "Hoogvliet",
+  "Jan Linders",
+  "Jumbo",
+  "Lidl",
+  "Makro",
+  "MCD",
+  "Nettorama",
+  "PLUS",
+  "Poiesz",
+  "Spar",
+  "Vomar"] as const;
+
+type ChainSuperMarketType = typeof chainSuperMarkets[number]
+type ChainSuperMarket = {
+  address: string,
+  phone: string
+}
+
+
+const chainSuperMarketMap: Record<ChainSuperMarketType, Array<ChainSuperMarket>> = {
+  "Boon's Markt": [],
+  "Dagwinkel": [],
+  "DekaMarkt": [],
+  "Dirk": [],
+  "EkoPlaza": [],
+  "Hoogvliet": [],
+  "Jan Linders": [],
+  "Jumbo": [],
+  "Lidl": [
+    { address: "Alberdingk Thijmstraat 21 (Overtoom/Leidseplein) 1054 AH", phone: "" },
+    { address: "Hemonylaan 25 (near Albert Cuyp market) 1074 BJ", phone: "" },
+    { address: "Baarsjesweg 308H (Vondelpark/Rembrandt Park) 1058 AH", phone: "" },
+    { address: "August Allebeplein 269 (Rembrandt Park) 1062 AB", phone: "" },
+    { address: "Eerste van Swindenstraat 52A (Oost) 1093 GG", phone: "" },
+    { address: "Soerabajastraat 4 (Oost) 1095 GP", phone: "" },
+    { address: "Nobelweg 27 (Oost) 1097 AR", phone: "" },
+    { address: "Sara Burgerhartstraat 80 (Bos en Lommer) 1055 LD", phone: "" },
+    { address: "Delflandplein 196 (Slotervaart) 1062 HW", phone: "" },
+    { address: "Osdorpplein 572 (Osdorp) 1068 TB", phone: "" },
+    { address: "Aalbersestraat 273-275 (Geuzenveld) 1067 MD", phone: "" },
+    { address: "Buikslotermeerplein 121C (Amsterdam Noord) 1025 ET", phone: "" },
+    { address: "Bezaanjachtplein 289 (Amsterdam Noord) 1034 CR", phone: "" },
+    { address: "Zuideinde 280 (Amsterdam Noord) 1035 PM", phone: "" },
+    { address: "Bijlmerplein 94 (Zuid-Oost) 1102 DA", phone: "" },
+  ],
+  "Makro": [],
+  "MCD": [],
+  "Nettorama": [],
+  "PLUS": [],
+  "Poiesz": [],
+  "Spar": [],
+  "Vomar": [],
+}
