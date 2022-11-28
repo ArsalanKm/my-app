@@ -218,11 +218,95 @@ export const chainSuperMarketMap: Record<ChainSuperMarketType, Array<ChainSuperM
   "Vomar": [],
 }
 
-export const leafs = ['Chain Supermarket',  'Iranian Supermarket' , 'Turkish Supermarket', 'International Supermarket'] as const
-export type LeafType = typeof leafs[number]
-export const leafMap: Record<LeafType, Array<string>> = {
-  "Chain Supermarket": chainSuperMarkets,
-  "Iranian Supermarket": [],
-  'Turkish Supermarket':[],
-  'International Supermarket':[]
+export type IndividualMarket = {
+  name: string;
+  nationality: string;
+  city: string;
+  address: string;
+  phone: string;
+  instagram?: string;
+  website: string;
+  location: string;
 }
+
+const IranianSuperMarkets: Array<IndividualMarket> = [
+  { name: "Setareh", nationality: "Iranian", city: "The Hague", address: "Betje Wolffstraat 311, 2533 HN", phone: "070 308 0137", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "Persia", nationality: "Iranian", city: "The Hague", address: "Rijswijkseweg 608, 2516 HW", phone: "079 351 8262", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "Persian", nationality: "Iranian", city: "Amsterdam", address: "Rozengracht 56, 1016 ND", phone: "020 423 2104", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "Crystal", nationality: "Iranian", city: "Rotterdam", address: "Zwart Janstraat 87a, b, 3035 AN", phone: "06 40769867", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "de Pers", nationality: "Iranian", city: "Utrecht", address: "Kanaalstraat 82, 3531 CL", phone: "030 294 8081", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "Roos", nationality: "Iranian", city: "Amsterdam", address: "Rozengracht 135, 1016 LV", phone: "020 639 3904", website: "https://www.roosmarket.nl/", location: "in goolge map	Supermarket" },
+  { name: "Koroush", nationality: "Iranian", city: "Amstelveen", address: "Rembrandtweg 158, 1181 GX", phone: "020 229 9461", website: "https://nl-nl.facebook.com/koroushmarket/", location: "in goolge map	Supermarket" },
+  { name: "Aria", nationality: "Iranian", city: "Arnhem", address: "Spijkerlaan 6, 6828 EC", phone: "026 446 0463", website: "https://superaria.nl/", location: "in goolge map	Supermarket" },
+  { name: "Bahar", nationality: "Iranian", city: "Delft", address: "Papsouwselaan 208, 2624 EG", phone: "015 256 8508", website: "https://www.baharfood.nl/", location: "in goolge map	Supermarket" },
+  { name: "Saffron", nationality: "Iranian", city: "Almere", address: "Bottelaarpassage 114, 1315 ET", phone: "036 534 6606", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "Homs", nationality: "Iranian", city: "Hilversum", address: "Spoorstraat 49, 1211 GA", phone: "06 84607119", website: "NA", location: "in goolge map	Supermarket" },
+  { name: "Zam Zam", nationality: "Iranian", city: "Leiden", address: "Raamsteeg 73, 2311 PM", phone: "071 542 7122", website: "https://zamzam.nl/", location: "in goolge map	Supermarket" },
+  { name: "IranBezorger", nationality: "Iranian", city: "Online", address: "NA", phone: "06 14509500", website: "https://iranbezorger.nl/", location: "in goolge map	Supermarket" },
+  { name: "Bastani Tehran", nationality: "Iranian", city: "The Hague", address: "Taag 61, 2491 CS", phone: "06 18116492", website: "https://www.bastanitehran.com/", location: "in goolge map	Supermarket" },
+
+]
+
+export const leafs = [
+  "Chain Supermarket",
+  "Iranian Supermarket",
+  "Turkish Supermarket",
+  "International Supermarket",
+  "BCC",
+  "Blokker",
+  "Mediamarket",
+  "Individual Appliances & White Goods",
+  "Chain Hardware Store",
+  "Individual Hardware Store",
+  "Chain Variety Store",
+  "Individual Variety Store",
+  "Chain Bakery",
+  "Individual Bakery",
+  "Chain Cosmetics & Beauty",
+  "Individual Cosmetics & Beauty",
+  "Chain Clothing",
+  "Individual Clothing",
+  "Chain Beverage",
+  "Individual Beverage",
+  "Chain Home & Garden",
+  "Individual Home & Garden",
+  "Chain Sporting Goods",
+  "Individual Sporting Goods",
+  "Chain Restaurant",
+  "Iranian Restaurant",
+  "Turkish Restaurant",
+  "International Restaurant"
+] as const
+export type LeafType = typeof leafs[number]
+export const leafMap: Record<LeafType, Array<string> | Array<IndividualMarket>> = {
+  "Chain Supermarket": chainSuperMarkets,
+  "Iranian Supermarket": IranianSuperMarkets,
+  "Turkish Supermarket": [],
+  "International Supermarket": [],
+  "BCC": [],
+  "Blokker": [],
+  "Mediamarket": [],
+  "Individual Appliances & White Goods": [],
+  "Chain Hardware Store": [],
+  "Individual Hardware Store": [],
+  "Chain Variety Store": [],
+  "Individual Variety Store": [],
+  "Chain Bakery": [],
+  "Individual Bakery": [],
+  "Chain Cosmetics & Beauty": [],
+  "Individual Cosmetics & Beauty": [],
+  "Chain Clothing": [],
+  "Individual Clothing": [],
+  "Chain Beverage": [],
+  "Individual Beverage": [],
+  "Chain Home & Garden": [],
+  "Individual Home & Garden": [],
+  "Chain Sporting Goods": [],
+  "Individual Sporting Goods": [],
+  "Chain Restaurant": [],
+  "Iranian Restaurant": [],
+  "Turkish Restaurant": [],
+  "International Restaurant": []
+}
+
+

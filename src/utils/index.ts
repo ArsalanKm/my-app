@@ -26,6 +26,7 @@ const listToTree = (list: Array<Category>) => {
 
 export const Tree = listToTree(categories)[0]
 
+const temps: string[] = []
 export function searchTree(element: Category, matchingTitle: string): Category | null {
     if (element.slug === matchingTitle) {
         return element;
@@ -39,3 +40,20 @@ export function searchTree(element: Category, matchingTitle: string): Category |
     }
     return null;
 }
+
+// export function findLeafs(element: Category): Category | null {
+//     if (!element.children || element.children.length === 0) {
+//         if (!temps.find(el => el === element.slug)) {
+//             temps.push(element.slug)
+//         }
+//     } else if (element.children != null) {
+//         var i;
+//         var result = null;
+//         for (i = 0; result == null && i < element.children.length; i++) {
+//             result = findLeafs(element.children[i]);
+//         }
+//         return result;
+//     }
+//     console.log(temps)
+//     return null;
+// }

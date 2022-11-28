@@ -27,7 +27,7 @@ const CategoryPage: React.FunctionComponent = () => {
         </div>
       )) : leafMap[cat as LeafType].map(el => (
         <div>
-          {el}
+          {typeof el === "string" ? el : el.city}
         </div>
       ))}
 
