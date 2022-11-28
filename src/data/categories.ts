@@ -8,59 +8,90 @@ export const categories: Array<Category> = [
     },
     {
         id: 2,
-        slug: 'shop',
+        slug: 'Shop',
         parentId: 1,
     },
     {
         id: 3,
-        slug: 'restaurant',
+        slug: 'Restaurant',
         parentId: 1
     },
     {
         id: 4,
-        slug: 'supermarket',
+        slug: 'Supermarket',
         parentId: 2
     },
     {
         id: 5,
-        slug: 'homeAppliance',
+        slug: 'Appliances & White Goods',
         parentId: 2
     },
     {
         id: 6,
-        slug: 'chainsupermarket',
-        parentId: 4
-    },
-    {
+        slug: 'Hardware Store',
+        parentId: 2
+    }, 
+     {
         id: 7,
-        slug: 'individualsupermarket',
-        parentId: 4
+        slug: 'Variety Store',
+        parentId: 2
     },
     {
         id: 8,
-        slug: 'chainhomeappliance',
-        parentId: 5
+        slug: 'Bakery',
+        parentId: 2
     },
     {
         id: 9,
-        slug: 'individualhomeappliance',
-        parentId: 5
+        slug: 'Cosmetic & Buty',
+        parentId: 2
     },
     {
         id: 10,
-        slug: 'irainiansupermarket',
-        parentId: 7
+        slug: 'Clothing',
+        parentId: 2
     },
     {
         id: 11,
-        slug: 'turkishsupermarket',
-        parentId: 7
+        slug: 'Beverage',
+        parentId: 2
     },
     {
         id: 12,
-        slug: 'internationalsupermarket',
-        parentId: 7
+        slug: 'Home & Garden',
+        parentId: 2
     },
+    {
+        id: 13,
+        slug: 'Sporting Goods',
+        parentId: 2
+    },
+    {
+        id: 14,
+        slug: 'Chain Supermarket',
+        parentId: 4
+    },
+    {
+        id: 15,
+        slug: 'Individual Supermarket',
+        parentId: 4
+    },
+    {
+        id: 16,
+        slug: 'Iranian Supermarket',
+        parentId: 15
+    },
+    {
+        id: 17,
+        slug: 'Turkish Supermarket',
+        parentId: 15
+    },
+    {
+        id: 18,
+        slug: 'International Supermarket',
+        parentId: 15
+    },
+      
 ]
 
 

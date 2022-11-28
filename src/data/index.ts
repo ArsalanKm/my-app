@@ -218,12 +218,11 @@ export const chainSuperMarketMap: Record<ChainSuperMarketType, Array<ChainSuperM
   "Vomar": [],
 }
 
-export const leafs = ['chainsupermarket', 'individualsupermarket', 'chainhomeappliance', "individualhomeappliance"] as const
+export const leafs = ['Chain Supermarket',  'Iranian Supermarket' , 'Turkish Supermarket', 'International Supermarket'] as const
 export type LeafType = typeof leafs[number]
 export const leafMap: Record<LeafType, Array<string>> = {
-  "chainsupermarket": chainSuperMarkets,
-  "individualsupermarket": [],
-  "chainhomeappliance": [],
-  "individualhomeappliance": []
-
+  "Chain Supermarket": chainSuperMarkets,
+  "Iranian Supermarket": [],
+  'Turkish Supermarket':[],
+  'International Supermarket':[]
 }
