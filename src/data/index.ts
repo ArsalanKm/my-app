@@ -159,24 +159,31 @@ export type Category = {
 }
 
 
-export const chainSuperMarkets = ["Boon's Markt",
-  "Dagwinkel",
-  "DekaMarkt",
-  "Dirk",
-  "EkoPlaza",
-  "Hoogvliet",
-  "Jan Linders",
-  "Jumbo",
-  "Lidl",
-  "Makro",
-  "MCD",
-  "Nettorama",
-  "PLUS",
-  "Poiesz",
-  "Spar",
-  "Vomar"];
+type ChainMarket = {
+  name: string;
+  image: string
 
-type ChainSuperMarketType = typeof chainSuperMarkets[number]
+}
+export const chainSuperMarkets: Array<ChainMarket> = [
+  { name: "Boon's Markt", image: "" },
+  { name: "Dagwinkel", image: "" },
+  { name: "DekaMarkt", image: "" },
+  { name: "Dirk", image: "" },
+  { name: "EkoPlaza", image: "" },
+  { name: "Hoogvliet", image: "" },
+  { name: "Jan Linders", image: "" },
+  { name: "Jumbo", image: "" },
+  { name: "Lidl", image: "" },
+  { name: "Makro", image: "" },
+  { name: "MCD", image: "" },
+  { name: "Nettorama", image: "" },
+  { name: "PLUS", image: "" },
+  { name: "Poiesz", image: "" },
+  { name: "Spar", image: "" },
+  { name: "Vomar", image: "" }];
+
+const marketNames = chainSuperMarkets.map(el => el.name)
+type ChainSuperMarketType = typeof marketNames[number]
 type ChainSuperMarket = {
   address: string,
   phone: string
@@ -277,8 +284,8 @@ export const leafs = [
   "Turkish Restaurant",
   "International Restaurant"
 ] as const
-export type LeafType = typeof leafs[number]
-export const leafMap: Record<LeafType, Array<string> | Array<IndividualMarket>> = {
+export type LeafType = typeof leafs[number];
+export const leafMap: Record<LeafType, Array<ChainMarket | IndividualMarket>> = {
   "Chain Supermarket": chainSuperMarkets,
   "Iranian Supermarket": IranianSuperMarkets,
   "Turkish Supermarket": [],

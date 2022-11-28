@@ -14,9 +14,10 @@ const CategoryPage: React.FunctionComponent = () => {
   if (!cat) {
     return null
   }
-
   items = (searchTree(Tree, cat)?.children || [])
 
+  const isChain = cat.toLocaleLowerCase().includes('chain')
+  console.log(isChain)
   return (
     <Paper className="category-page">
       {items && items.length > 0 ? items.map((el) => (
@@ -24,8 +25,8 @@ const CategoryPage: React.FunctionComponent = () => {
           {el.slug}
         </Link>
       )) : leafMap[cat as LeafType].map(el => (
-        <div key={typeof el === "string" ? el : el.name}>
-          {typeof el === "string" ? el : el.city}
+        <div key={el.name}>
+          {el.name}
         </div>
       ))}
 
