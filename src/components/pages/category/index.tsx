@@ -20,13 +20,11 @@ const CategoryPage: React.FunctionComponent = () => {
   return (
     <Paper className="category-page">
       {items && items.length > 0 ? items.map((el) => (
-        <div key={el.id}>
-          <Link to={`/category/${el.slug}`}>
-            {el.slug}
-          </Link>
-        </div>
+        <Link key={el.id} to={`/category/${el.slug}`}>
+          {el.slug}
+        </Link>
       )) : leafMap[cat as LeafType].map(el => (
-        <div>
+        <div key={typeof el === "string" ? el : el.name}>
           {typeof el === "string" ? el : el.city}
         </div>
       ))}
